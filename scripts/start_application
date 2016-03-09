@@ -5,7 +5,7 @@ set -e
 CATALINA_HOME='/usr/share/tomcat7-codedeploy'
 DEPLOY_TO_ROOT='true'
 #CONTEXT_PATH='##CONTEXT_PATH##'
-SERVER_HTTP_PORT='4080'
+SERVER_HTTP_PORT='80'
 
 TEMP_STAGING_DIR='/tmp/codedeploy-deployment-staging-area'
 WAR_STAGED_LOCATION="$TEMP_STAGING_DIR/SampleMavenTomcatApp.war"

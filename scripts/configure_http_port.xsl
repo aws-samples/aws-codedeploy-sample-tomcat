@@ -9,7 +9,7 @@
 
     <xsl:template match="//Service/Connector[@protocol = 'HTTP/1.1']/@port">
         <xsl:attribute name="port">
-            <xsl:value-of select="'4080'" />
+            <xsl:value-of select="'80'" />
         </xsl:attribute>
     </xsl:template>
 
