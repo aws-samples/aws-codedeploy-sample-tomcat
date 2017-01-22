@@ -8,6 +8,7 @@ environment_variables:
 phases:
   install:
     commands:
+      - echo TestFeature1Branch
       - echo Starting CodeBuild install Phase on `date`
       - echo ENV_VAR1=$ENV_VAR1
       - echo ENV_VAR2=$ENV_VAR2
