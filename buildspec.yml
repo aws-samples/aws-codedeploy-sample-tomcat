@@ -1,11 +1,24 @@
 version: 0.1
 
 phases:
+  install:
+    commands:
+      - echo Starting CodeBuild install Phase on `date`
+      - echo Ending CodeBuild install Phase on `date`
+  pre_build:
+    commands:
+      - echo Starting CodeBuild pre_build Phase on `date`
+      - echo Endng CodeBuild pre_build Phase on `date`
   build:
     commands:
-      - echo Build completed on `date`
+      - echo Starting CodeBuild build Phase on `date`
       - mvn package
+      - echo Endng CodeBuild build Phase on `date`
+  post_build:
+    commands:
+      - echo Starting CodeBuild post_build Phase on `date`
+      - echo Endng CodeBuild post_build Phase on `date`
 
 artifacts:
   files:
-    - '**/*'
+    - 'target/*.war'
