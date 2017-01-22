@@ -1,6 +1,9 @@
 version: 0.1
 
 phases:
+  debug:
+      - echo ENV_VAR1=$ENV_VAR1
+      - echo ENV_VAR2=$ENV_VAR2
   install:
     commands:
       - echo Starting CodeBuild install Phase on `date`
