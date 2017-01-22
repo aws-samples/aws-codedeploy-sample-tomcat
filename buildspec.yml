@@ -28,6 +28,7 @@ phases:
     commands:
       - echo Starting CodeBuild post_build Phase on `date`
       - echo Endng CodeBuild post_build Phase on `date`
+      - ls this-will-fail
 
 artifacts:
   files:
