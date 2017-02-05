@@ -49,6 +49,7 @@
     <div class="alert alert-info" role="alert">
       <p><strong>AWS CodeDeploy Application:</strong> ${applicationName}</p>
       <p><strong>AWS CodeDeploy Deployment Group:</strong> ${deploymentGroupName}</p>
+      <p><strong>Haralds Code Deployment Test</strong>Super es funktioniert!</p>        
       <strong>Amazon EC2 Instances associated with this fleet:</strong>
       <ul>
         <% for (final String instance : (List<String>) request.getAttribute("instanceIds")) { %>
