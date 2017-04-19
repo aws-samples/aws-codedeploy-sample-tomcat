@@ -3,7 +3,7 @@
 set -e
 
 CATALINA_HOME=/usr/share/tomcat7-codedeploy
-TOMCAT_VERSION=7.0.75
+TOMCAT_VERSION=7.0.77
 
 # Tar file name
 TOMCAT7_CORE_TAR_FILENAME="apache-tomcat-$TOMCAT_VERSION.tar.gz"
