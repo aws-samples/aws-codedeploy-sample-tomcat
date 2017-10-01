@@ -1,11 +1,36 @@
 version: 0.1
 
+environment_variables:
+  plaintext:
+    plaintext_key1: "plaintext_value1"
+    plaintext_key2: "plaintext_value2"
+
 phases:
+  install:
+    commands:
+      - echo Printing all env variables
+      - printenv
+      - echo Starting CodeBuild install Phase on `date`
+      - echo ENV_VAR1=$ENV_VAR1
+      - echo ENV_VAR2=$ENV_VAR2
+      - echo plaintext_key1=$plaintext_key1
+      - echo plaintext_key2=$plaintext_key2
+      - echo Ending CodeBuild install Phase on `date`
+  pre_build:
+    commands:
+      - echo Starting CodeBuild pre_build Phase on `date`
+      - echo Endng CodeBuild pre_build Phase on `date`
   build:
     commands:
-      - echo Build completed on `date`
+      - echo Starting CodeBuild build Phase on `date`
       - mvn package
+      - echo Endng CodeBuild build Phase on `date`
+  post_build:
+    commands:
+      - echo Starting CodeBuild post_build Phase on `date`
+      - echo Endng CodeBuild post_build Phase on `date`
 
 artifacts:
   files:
-    - '**/*'
+    - 'target/*.war'
+  discard-paths: yes
