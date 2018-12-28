@@ -62,7 +62,7 @@ public class MvcConfiguration extends WebMvcConfigurerAdapter {
         client.setRegion(region);
         return client;
     }
-    
+
     @Bean
     public AmazonAutoScaling autoScaling() {
         AmazonAutoScaling client = new AmazonAutoScalingClient();
@@ -76,7 +76,7 @@ public class MvcConfiguration extends WebMvcConfigurerAdapter {
         try {
             configurer.setLocations(new PathMatchingResourcePatternResolver().getResources("file:/var/codedeploy/tomcat-sample/env.properties"));
         } catch (IOException e) {
-            throw new RuntimeException("Failed to load resources.", e);
+            throw new RuntimeException("Failed to load resources!", e);
         }
         return configurer;
     }
